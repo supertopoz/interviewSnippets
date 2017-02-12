@@ -1,0 +1,16 @@
+function countVowels(str){
+  
+  var vowels = "aeiou", count = 0;
+  
+  if (str.length <= 0) {
+    return count;
+  }
+  else if (vowels.indexOf(str[0]) !== -1){
+    return count += 1 + countVowels(str.slice(1));
+  }
+  else {
+    return countVowels(str.slice(1));
+  }
+}
+
+console.log(countVowels('Four score and seven years'));
