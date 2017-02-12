@@ -1,0 +1,12 @@
+var arr = ["a","b","c","d"];
+
+function reverseArray(arr) {
+    var newArr = [];
+    if(!arr.length) {
+        return newArr;
+    } else {
+        return newArr.concat(reverseArray(arr.slice(1)), arr[0]);
+    }
+}
+
+console.log(reverseArray(arr));
