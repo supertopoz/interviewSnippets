@@ -1,0 +1,21 @@
+function gcd(a,b){
+  if(a === b){
+    return a;
+  }
+  else if(a > b) {
+    return gcd(a-b,b);  
+  } 
+  else {
+    return gcd(a,b-a);  
+  }
+}
+
+console.log(gcd(12,2)); 
+
+
+function gcd(a,b) {
+  if (b === 0) {
+    return a;
+  }
+  return gcd(b, a % b);
+}
