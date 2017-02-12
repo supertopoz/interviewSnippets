@@ -1,0 +1,15 @@
+var num = 12345
+
+function sumDigits(num) {
+    let numStr = num.toString();
+    let total = 0;
+    if (numStr.length <= 1) {
+        total += Number(numStr);
+    } else {
+     
+        total = total + Number(numStr[0]) + sumDigits(numStr.slice(1));
+    }
+    return total;
+}
+
+console.log(sumDigits(num));
