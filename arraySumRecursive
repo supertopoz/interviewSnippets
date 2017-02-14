@@ -1,0 +1,23 @@
+// Array Sum
+
+// Write a fuction that accepts an array and returns the sum of all the numbers in the array (no matter how nested!).
+
+//arraySum([1, [2, 3, [4]]])    // => 10
+
+function arraySum(arr){
+  console.log(arr);
+  //Base case
+  if(arr.length === 0){
+    return 0;
+  }
+  //Heading towards base case. 
+  //Get the first item - check if an array - if it is an array pass back into the function. 
+    if (!Array.isArray(arr[0])){
+    return arr[0] + arraySum(arr.slice(1));  
+    }
+    else if (Array.isArray(arr[0])) { 
+    return arraySum(arr[0]) + arraySum(arr.slice(1));
+    }
+}
+
+arraySum([1, [2, 3], 4]);
