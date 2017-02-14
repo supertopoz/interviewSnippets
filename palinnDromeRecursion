@@ -1,0 +1,16 @@
+var reverse = (word) => {
+  
+  let nWord = "";
+  if (word.length === 0)
+    return nWord;
+  else
+    return nWord.concat(reverse(word.slice(1)), word[0].toLowerCase());
+}
+
+var isPalindrome = (word) =>{return reverse(word.toLowerCase()) === word.toLowerCase()};
+
+
+isPalindrome("Kayak");    // => true
+//isPalindrome("NEVERODDOREVEN")    // => true
+//isPalindrome("Tacocat")    // => true
+//isPalindrome("SELFLESS")    // => false
