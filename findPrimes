@@ -1,0 +1,19 @@
+function findPrimes(max){
+  results = [];
+
+  function isPrime(num) {
+    if(num < 2) return false;
+       for (var i = 2; i < num; i++) {
+          if(num%i==0)
+            return false;
+    }
+    return true;
+}
+
+  for(var i = 0; i < max; i++){
+    if(isPrime(i)) results.push(i);
+  }
+  return results
+}
+
+console.log(findPrimes(30));
