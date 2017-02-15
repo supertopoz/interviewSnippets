@@ -1,0 +1,16 @@
+Angle between hour and minute hand
+
+var time = "5:24";
+
+function angle(time){
+  
+  var h = Number(time.split(":")[0]);
+  var m = Number(time.split(":")[1]);
+  
+  var result = 0.5 * (( 60*h ) - ( 11 * m ));
+    if (result <0) result * -1;
+    if (result > 180) result = 360 - result;
+    return result;
+}
+
+console.log(angle(time));
