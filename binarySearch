@@ -1,0 +1,34 @@
+
+//search([1,2,4,5,6,7,8], 2)
+// -> true
+
+search([1,5,15,13,20,30,40], 31);
+// -> false
+
+function search(arr, searchNum){
+  arr = arr.sort();
+  var x = arr.length
+  var mid = 0;
+  var a = true;
+  if(searchNum > arr[arr.length-1]){
+    return false
+  }
+  while(a === true){
+    mid = Math.floor((arr.length-1)/2);
+    if(arr[mid] === searchNum){
+      return true;
+    }
+    if ( searchNum > arr[mid]){
+      arr = arr.slice(mid);
+    }
+    if (searchNum < arr[mid]){
+      arr = arr.slice(0, mid);
+    }  
+    console.log(arr.length)
+    if (arr.length === 0 || arr.length === 1){
+      a = false;
+    }
+  }
+  return false;
+}
+  
