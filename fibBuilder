@@ -1,0 +1,16 @@
+var i;
+var fib = []; // Initialize array!
+  result = []
+  fib[0] = 0;
+  fib[1] = 1;
+  for(i=2; i<=33; i++)
+  {
+    fib[i] = fib[i-2] + fib[i-1];
+    
+      result.push(fib[i])
+    
+  }
+  var sum = result.reduce(function(a,b){
+    return a+b
+  },0)
+  console.log(sum)
