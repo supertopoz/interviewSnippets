@@ -1,0 +1,4 @@
+function largestPrimeFactor(n){
+var i=2;
+while (i<=n){ if (!(n%i)) n/=i; else i++;} console.log(i);}
+largestPrimeFactor(600851475143)
