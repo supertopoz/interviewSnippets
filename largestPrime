@@ -1,3 +1,12 @@
+//pseodo code. 
+
+//Start i at 2. 
+//divide the number(n) by 2(i) and check to see if the remainder is 0. 
+// if the remainder is 0 take n and divide it by i = the largest prime largestPrimeFactor
+// or keep incrementing i while i is less than the n
+
+
+
 function largestPrimeFactor(n){
 var i=2;
 while (i<=n){ if (!(n%i)) n/=i; else i++;} console.log(i);}
