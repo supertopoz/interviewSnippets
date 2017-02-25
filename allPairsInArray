@@ -1,0 +1,14 @@
+arr = [5,9,10,7,4]
+var result = []
+var count = 0
+for(var i = 0; i<arr.length; i++){
+  for(var x = 0; x<arr.length; x++){
+    if(i !== x){
+    console.log("Fixed:" +arr[i]+" Other:"+arr[x])  
+      if ((arr[i]+arr[x])%3 === 0)  {
+        count +=1
+      }
+    }
+        
+  }
+}
