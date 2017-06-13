@@ -1,4 +1,2 @@
-function fibonacci(n){
-  return (n <= 1)? n: ibonacci(n-1) + fibonacci(n-2);
-}
+var fibonacci = (n) => (n <= 1)? n: ibonacci(n-1) + fibonacci(n-2);
 fibonacci(4);    // => 8
